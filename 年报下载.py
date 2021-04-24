@@ -7,6 +7,7 @@ import numpy as np
 base_url = 'http://www.cninfo.com.cn/new/announcement/download'
 root_dir = pathlib.Path.cwd()
 pdf_dir = root_dir.joinpath('pdf')
+pdf_dir.mkdir(exist_ok=True)
 
 
 df = pd.read_csv('./pdf_to_download.csv', dtype={'secCode': np.object})
